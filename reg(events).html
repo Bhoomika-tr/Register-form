@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  </head>
+  <style>
+ * {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.left-section {
+  overflow: hidden;
+  /* display: flex; */
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-animation-name: left-section;
+          animation-name: left-section;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.right-section {
+  flex: 1;
+  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
+  transition: 1s;
+  background-image: url(images/street-animals-307x308.png);
+  width: 100% !important;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header > h1 {
+  margin: 0;
+  color: #f50629;
+}
+.header > h4 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.form {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.form > p {
+  text-align: right;
+}
+.form > p > a {
+  color: #000;
+  font-size: 14px;
+}
+.form-field {
+  height: 46px;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  outline: 0;
+  transition: .2s;
+  margin-top: 20px;
+  background-color: black;
+}
+.form-field:focus {
+  border-color: #0f7ef1;
+}
+.form > button {
+  padding: 12px 10px;
+  border: 0;
+  background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Rubik', sans-serif;
+}
+.animation {
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.a1 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.a2 {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+.a3 {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+.a4 {
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+.a5 {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.a6{
+    -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+    
+
+}
+.a7 {
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+}
+.a8{
+  -webkit-animation-delay: 2.7s ;
+          animation-delay: 2.7s ;
+}
+.a9{
+  -webkit-animation-delay: 2.8s ;
+          animation-delay: 2.8s ;
+}
+.a10{
+  -webkit-animation-delay: 2.9s ;
+          animation-delay: 2.9s ;
+}
+.a11{
+  -webkit-animation-delay: 2.10s ;
+          animation-delay: 2.10s ;
+}
+
+
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes left-section {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+canvas {
+    background-color: white;
+}
+
+#instructions {
+	position: absolute;
+	color: #000;
+	bottom: 0;
+	padding-bottom: 6px;
+	font-family: sans-serif;
+    font-size: 20px;
+	width: 100%;
+	text-align: center;
+	pointer-events: none;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+
+::placeholder{
+  color: #ddd;
+}
+input{
+  color: #ddd;
+}
+
+
+  </style>
+  <body>
+
+    <!DOCTYPE html>
+    <!-- Code By Webdevtrick ( https://webdevtrick.com ) -->
+    <html lang="en" >
+    <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    </head>
+    <body>
+    
+    <div class="container">
+      <div class="left-section">
+        <div class="header">
+          <h1 class="animation a1">Registration</h1>
+          
+        </div>
+        <div class="form">
+          <input type="text" class="form-field animation a3" id="t1" name="name" placeholder="Name">
+          <input type="text" class="form-field animation a4" id="t2" name="contactnumber" placeholder="Contact Number">
+           <input type="email" class="form-field animation a5" id="t3" name="email" placeholder="Email"> 
+          <!-- <input type="text" class="form-field animation a5" placeholder="Select your location"> -->
+          <select type="text" name="state" class="form-field animation a6" id="t4"   style="color: #ddd;" placeholder="state">
+            <option value="0">Select a state
+            </option>
+            <option value="1">ANDAMAN AND NICOBAR ISLANDS</option>
+            <option value="2">ANDHRA PRADESH</option>
+            <option value="3">ARUNACHAL PRADESH</option>
+            <option value="4">ASSAM</option>
+        <option value="5">BIHAR</option>
+        <option value="6">CHANDIGARH</option>
+        <option value="7">CHHATTISGARH</option>
+        <option value="8">DADRA AND NAGAR HAVELI</option>
+        <option value="9">DAMAN AND DIU</option>
+        <option value="10">DELHI</option>
+        <option value="11">GOA	</option>
+        <option value="12">GUJARAT</option>
+        <option value="13">HARYANA</option>
+
+        <option value="14">HIMACHAL PRADESH</option>
+        <option value="15">JAMMU AND KASHMIR	</option>
+        <option value="16">JHARKHAND</option>
+     
+        <option value="17">KARNATAKA</option>
+        <option value="18">KERALA</option>
+        <option value="19">LAKSHADWEEP</option>
+        <option value="20">MADHYA PRADESH</option>
+        <option value="21">MAHARASHTRA</option>
+        <option value="22">MANIPUR</option>
+        <option value="23">MEGHALAYA</option>
+        <option value="24">MIZORAM	</option>
+        <option value="25">NAGALAND	</option>
+        <option value="26">ORISSA	</option>
+        <option value="27">PONDICHERRY	</option>
+        <option value="28">PUNJAB	</option>
+        <option value="29">RAJASTHAN	</option>
+        <option value="30">SIKKIM</option>
+        <option value="31">TAMIL NADU	</option>
+        <option value="32">TELANGANA</option>
+        <option value="32">TRIPURA</option>
+        <option value="32">UTTAR PRADESH</option>
+        <option value="32">UTTARAKHAND</option>
+        <option value="32">WEST BENGAL</option>
+
+
+        
+            </select>
+          
+            <select type="text" name="district" class="form-field animation a7"  style="color: #ddd;" id="t5" placeholder="district">
+                <option value="none">District/Region
+                </option>
+                <option value="1">BANGALORE</option>
+                <option value="2">MANGALORE</option>
+                <option value="3">MYSURU</option>
+                <option value="4">SHIVAMOGGA</option>
+              
+                </select>
+
+ 
+            <select type="text" name="events" class="form-field animation a8"  style="color: #ddd;" id="t6" placeholder="Events">
+                <option value="none">Events
+                </option>
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                
+              
+                </select>
+
+                <div style="text-align:left" class="animation a9">
+                    <a href="tnc.html"  target="_blank">Terms & Conditions</a>
+                    
+                
+                    <input type="checkbox"
+                        name="tnc" id="myCheck"  onclick="myFunction()">I agree.
+                        
+               
+            
+                    
+                </div>
+                
+                <button   type="submit" onclick="registration()" target="_blank" class="animation a10" value="Send" name="submit">SUBMIT AND PAY</button>
+            
+
+
+        </div>
+      </div>
+      <div class="right-section"></div>
+    </div>
+
+    // Some random colors
+    <script>
+    const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+    
+    const numBalls = 30;
+    const balls = [];
+    
+    for (let i = 0; i < numBalls; i++) {
+      let ball = document.createElement("div");
+      ball.classList.add("ball");
+      ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+      ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+      ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+      ball.style.transform = `scale(${Math.random()})`;
+      ball.style.width = `${Math.random()}em`;
+      ball.style.height = ball.style.width;
+      
+      balls.push(ball);
+      document.body.append(ball);
+    }
+    
+    // Keyframes
+    balls.forEach((el, i, ra) => {
+      let to = {
+        x: Math.random() * (i % 2 === 0 ? -11 : 11),
+        y: Math.random() * 12
+      };
+    
+      let anim = el.animate(
+        [
+          { transform: "translate(0, 0)" },
+          { transform: `translate(${to.x}rem, ${to.y}rem)` }
+        ],
+        {
+          duration: (Math.random() + 1) * 2000, // random duration
+          direction: "alternate",
+          fill: "both",
+          iterations: Infinity,
+          easing: "ease-in-out"
+        }
+      );
+    });
+</script>    
+
+<script>
+ 
+    function registration()
+    {
+
+        var name=document.getElementById("t1").value;
+        var contactnumber=document.getElementById("t2").value;
+        var email=document.getElementById("t3").value;
+        var state=document.getElementById("t4").value;
+        var district= document.getElementById("t5").value;
+        var events= document.getElementById("t6").value;
+  
+
+
+        var checkBox=document.getElementById("myCheck");
+
+
+        
+        //email id expression code
+        var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+        var letters = /^[A-Za-z]+$/;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var phoneno = /^\d{10}$/;
+
+        if(name=='')
+        {
+            alert('Please enter your name');
+        }
+        else if(!letters.test(name))
+        {
+            alert('First name field required only alphabet characters');
+        }
+
+      
+        else if(location=='')
+        {
+            alert('Please select atleast one  location ');
+        }
+    
+        else if(events=='')
+        {
+            alert('Please select events ');
+        }
+        else if(state==false)
+        {
+            alert('Please select state ');
+        }
+        
+
+      else if(district=='none')
+        {
+            alert('Please select district ');
+        }
+        else if(events=='none')
+        {
+            alert('Please select one event ');
+        }
+     
+     
+     
+       
+       
+       
+        else if(contactnumber=='')
+        {
+            alert('Please enter your contact number')
+        }
+        else if(!phoneno.test(contactnumber))
+        {
+            alert('Invalid contact number');
+        }
+       
+        else if(email=='')
+            {
+                alert('Please enter your user email id');
+            }
+            else if (!filter.test(email))
+            {
+                alert('Invalid email');
+            }
+     
+       
+       else   if (checkBox.checked == false){
+alert('Please agree to the terms & conditions');
+       }
+
+       
+        else
+        {				                            
+               
+               // Redirecting to other page or webste code. 
+               window.location = "razorpay.html"; 
+        }
+    }
+
+</script>
+
+
+  </body>
+</html>
